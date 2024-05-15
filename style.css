@@ -1,0 +1,470 @@
+@font-face {
+    font-family: Product sans;
+    src: url("Product\ Sans\ Regular.ttf");
+}
+@font-face {
+    font-family: Product sans bold;
+    src: url("Product\ Sans\ Bold.ttf");
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Product sans;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+input,textarea,button,select,a{
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+a:focus,a:visited,a:active{
+    outline: none;
+}
+
+html, body{
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+    background-color: #f7f7f7; /* Background color */
+    
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+#main{
+    height: 100vh;
+    width: 100%;
+    background-color: orangered;
+}
+
+nav{
+    position: fixed;
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    z-index: 20;
+}
+
+nav img{
+    width: 6.5%;
+    filter: drop-shadow(16px 18px 10px rgba(0, 0, 0, 0.6));
+    cursor: pointer;
+    animation: hoverAnimation 3s infinite alternate;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1,0.5);
+}
+
+nav a, i{
+    text-decoration: none;
+    font-size: 1.3vw;
+    color: #fff;
+}
+
+nav a{
+    margin: 0 10px;
+    padding: 10px 20px;
+    font-family: Product sans bold;
+    background-color: transparent; /* Initial background color */
+    border-radius: 50px;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for background color and text color */
+}
+
+nav a:hover{
+    background-color: #ff4500; /* Orangered background color on hover */
+    color: white; /* White text color on hover */
+    cursor: pointer;
+    font-family: Product sans;
+}
+
+nav i{
+    visibility: hidden;
+    font-size: 1.8vw;
+}
+
+.center-nav{
+   display: flex;
+   flex-wrap: wrap;
+   gap: 3vw;
+}
+
+.one{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(150deg,rgb(251, 146, 0), rgba(255, 38, 0, 0.853));
+    animation: gradientAnimation 6s infinite alternate; /* Name, duration, iteration count, direction */
+    background-size: 200% 200%;
+    position: relative;
+}
+
+#fanta{
+    position: absolute;
+    width: 40%;
+    filter: drop-shadow(-24px 16px 20px rgba(0, 0, 0, 0.7));
+    z-index: 2;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1,0.5);
+}
+
+#fanta:hover{
+    cursor: pointer;
+    animation: hoverAnimation 3s infinite alternate;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1,0.5);
+    z-index: 10;
+}
+
+#orange-cut{
+    position: absolute;
+    top: 6%;
+    left: 32%;
+    width: 18%;
+    filter: drop-shadow(0px 20px 20px rgba(0, 0, 0, 0.9));
+    z-index: 1;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1,0.5);
+}
+
+#orange-cut:hover{
+    cursor: pointer;
+    animation: hoverAnimation 3s infinite alternate;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1,0.5);
+    z-index: 10;
+}
+
+#orange{
+    position: absolute;
+    width: 19%;
+    top: 56%;
+    right: 30%;
+    z-index: 3;
+    filter: drop-shadow(16px 18px 10px rgba(0, 0, 0, 0.75));
+    transition: all cubic-bezier(0.19, 1, 0.22, 1,0.5);
+}
+
+#orange:hover{
+    cursor: pointer;
+    animation: hoverAnimation 3s infinite alternate;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1,0.5);
+    z-index: 10;
+}
+
+.one h1{
+    font-size: 24vw;
+    font-family:  Product sans bold;
+    color: #fff;
+    text-shadow: 10px 20px 20px rgba(0, 0, 0, 0.6);
+}
+
+#leaf{
+    position: absolute;
+    width: 15%;
+    top: 8%;
+    left: 2%;
+    z-index: 4;
+    transform: rotate(50deg);
+    filter: drop-shadow(12px 16px 10px rgba(0, 0, 0, 0.7));
+    transition: all cubic-bezier(0.19, 1, 0.22, 1,0.5);
+    transition: all cubic-bezier(0.19, 1, 0.22, 1,0.5);
+    animation: hoverAnimation 3s infinite alternate;
+}
+
+#leaf:hover{
+    cursor: pointer;
+}
+
+#leaf2{
+    position: absolute;
+    top:70%;
+    left:80%;
+    width: 11%;
+    filter: drop-shadow(-20px 10px 12px rgba(0, 0, 0, 0.6));
+    z-index: 5;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1,0.5);
+    transition: all cubic-bezier(0.19, 1, 0.22, 1,0.5);
+    animation: hoverAnimation 3s infinite alternate;
+}
+
+#leaf2:hover{
+    cursor: pointer;
+}
+
+#leaf3{
+    position: absolute;
+    top: 6%;
+    right: -1.5%;
+    width: 22%;
+    filter: drop-shadow(0px 10px 18px rgba(0, 0, 0, 0.7));
+    transition: all cubic-bezier(0.19, 1, 0.22, 1,0.5);
+    animation: hoverAnimation 3s infinite alternate;
+}
+
+#leaf3:hover{
+    cursor: pointer;
+}
+
+.two{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    background: linear-gradient(90deg,rgb(251, 105, 0), orangered);
+    animation: gradientAnimation 6s infinite alternate-reverse; /* Name, duration, iteration count, direction */
+    background-size: 300% 300%;
+    position: relative;
+}
+
+.lft-two, .rght-two{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2vw;
+}
+
+.lft-two svg{
+    margin-top: 20vh;
+    width: 96%;
+    transform: rotate(40deg) scaleX(-1);
+    
+}
+
+.rght-two{
+    padding: 0 12vh;
+    color: white;
+    font-family: Product sans;
+    font-size: 1.2vw;
+}
+.rght-two h1{
+    font-family: Product sans bold;
+    font-size: 5vw;
+}
+.rght-two p{
+    
+    width: 80%;
+}
+
+.three{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    background: linear-gradient(30deg,rgba(251, 105, 0, 0.981), rgba(255, 30, 0, 0.99));
+    animation: gradientAnimation 5s infinite alternate; /* Name, duration, iteration count, direction */
+    background-size: 300% 300%;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    gap: 5vw;
+}
+
+.card{
+    position: relative;
+    width: 25vw;
+    height: 70vh;
+    margin-top: 10vh;
+    border-radius: 20px;
+    background-color: #f0f0f0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2vh;
+    box-shadow: -16px 18px 26px rgba(0, 0, 0, 0.75);
+}
+
+.card:hover{
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+.card:nth-child(1){
+    background: linear-gradient(120deg, #004b96, #ffffff, #e32934);
+    background-size: 400% 400%; /* Increase size for smooth animation */
+    animation: gradientAnimation 10s ease infinite; /* Animation for gradient */
+}
+
+.card:nth-child(2){
+    background: linear-gradient(120deg, #ff6c00, #fff949, #ff6c00);
+        background-size: 400% 400%; /* Increase size for smooth animation */
+        animation: gradientAnimation 10s ease infinite; /* Animation for gradient */
+}
+
+.card:nth-child(3){
+    background: linear-gradient(120deg, #990000, #ff5656, #ff4016, #990000);
+        background-size: 600% 600%; /* Increase size for smooth animation */
+        animation: gradientAnimation 10s ease infinite; /* Animation for gradient */
+}
+
+.card h1{
+    margin-top: 40vh;
+    font-size: 3vw;
+    font-family: Product sans bold;
+    color: #fff;
+}
+
+.card button{
+    padding: 1vw 2vw;
+    font-size: 1.2vw;
+    font-family: Product sans;
+    border-radius: 50px;
+    border: none;
+    background-color: rgb(255, 149, 0);
+    cursor: pointer;
+    box-shadow:  8px 4px rgba(0, 0, 0, 0.5);
+    color: #fff;
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for background color, text color, and box-shadow */
+}
+
+.card:nth-child(1) button{
+    background-color: #0067cd;
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for background color, text color, and box-shadow */
+}
+
+.card:nth-child(1) button:hover{
+    background-color: #0051a8 ; /* Darker blue on hover */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add box-shadow on hover */
+}
+
+.card:nth-child(3) button{
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for background color, text color, and box-shadow */
+    background-color: #a30e00;
+}
+
+.card:nth-child(3) button:hover{
+    background-color: #871101; /* Darker shade on hover */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add box-shadow on hover */
+}
+
+.card:nth-child(2) button:hover{
+    background-color: rgb(255, 118, 0); /* Darker shade on hover */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add box-shadow on hover */
+}
+
+#cocacola{
+    top:-11%;
+    /* left: 50%; */
+    position: absolute;
+    width: 55%;
+    /* transform: translate(-50%, 0%); */
+    filter: drop-shadow(14px 18px 10px rgba(0, 0, 0, 0.7));
+    transition: all cubic-bezier(0.19, 1, 0.22, 1,0.5);
+}
+
+#cocacola:hover{
+    cursor: pointer;
+    animation: hoverAnimation 3s infinite alternate;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1,0.5);
+    z-index: 10;
+}
+
+#pepsi{
+    top:-14%;
+    /* left: 50%; */
+    /* transform: translate(-50%, 0%); */
+    position: absolute;
+    width: 80%;
+    filter: drop-shadow(-14px 18px 10px rgba(0, 0, 0, 0.7));
+    transition: all cubic-bezier(0.19, 1, 0.22, 1,0.5);
+}
+
+#pepsi:hover{
+    cursor: pointer;
+    animation: hoverAnimation 3s infinite alternate;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1,0.5);
+    z-index: 10;
+}
+
+
+.lemon{
+    top: -35%;
+    width: 24vw;
+    /* left: 50%; */
+    /* transform: translate(-50%, 0%); */
+    position: absolute;
+    filter: drop-shadow(10px 18px 10px rgba(0, 0, 0, 0.75));
+    transition: all cubic-bezier(0.19, 1, 0.22, 1,0.5);
+}
+
+.lemon:hover{
+    cursor: pointer;
+    animation: hoverAnimation 3s infinite alternate;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1,0.5);
+    z-index: 10;
+}
+
+.apple{
+    width: 18vw;
+    top: -30%;
+}
+
+.lemon2{
+    filter: drop-shadow(-10px 18px 10px rgba(0, 0, 0, 0.75));
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes hoverAnimation {
+    0% {
+        transform: rotate(0);
+    }
+    50% {
+        transform: rotate(3deg);
+    }
+    100% {
+        transform: rotate(-3deg);
+    }
+}
+
+/* Define scrollbar styles */
+    ::-webkit-scrollbar {
+        width: 8px; /* Width of the scrollbar */
+        height: 8px; /* height of the scrollbar */
+    }
+
+    /* Track styles */
+    ::-webkit-scrollbar-track {
+        background: rgba(255, 38, 0, 0.853); /* Background color of the scrollbar track */
+    }
+
+    /* Handle styles */
+    ::-webkit-scrollbar-thumb {
+        background:  rgb(255, 161, 30); /* Color of the scrollbar handle */
+        border-radius: 5px; /* Border radius of the scrollbar handle */
+    }
+
+    /* Handle on hover styles */
+    ::-webkit-scrollbar-thumb:hover {
+        background: rgb(251, 146, 0); /* Color of the scrollbar handle on hover */
+    }
+
+    /* Corner styles */
+    ::-webkit-scrollbar-corner {
+        background: #f0f0f0; /* Background color of the scrollbar corner */
+    }
+
+    /* Resizer styles */
+    ::-webkit-resizer {
+        background: #f0f0f0; /* Background color of the scrollbar resizer */
+    }
